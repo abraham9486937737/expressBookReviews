@@ -37,22 +37,21 @@ Committed and pushed all changes to forked GitHub repo for peer review.
 
 🧪 Testing with curl
 Register
-bash
 curl -X POST http://localhost:5000/customer/register \
   -H "Content-Type: application/json" \
   -d '{"username":"abraham123","password":"securepass"}'
 Login
-bash
+
 curl -c cookies.txt -X POST http://localhost:5000/customer/login \
   -H "Content-Type: application/json" \
   -d '{"username":"abraham123","password":"securepass"}'
 Add Review
-bash
+
 curl -b cookies.txt -X PUT http://localhost:5000/customer/auth/review/1 \
   -H "Content-Type: application/json" \
   -d '{"review":"Amazing book!"}'
 Delete Review
-bash
+
 curl -b cookies.txt -X DELETE http://localhost:5000/customer/auth/review/1
 📸 Screenshots for Peer Review
 6-register.png
@@ -79,14 +78,11 @@ Express Book Reviews Repo
 🛠️ How to Run
 Clone the repo:
 
-bash
 git clone https://github.com/abraham9486937737/expressBookReviews.git
 Install dependencies:
 
-bash
 npm install
 Start the server:
 
-bash
 npm start
 Test endpoints with curl or Postman.
